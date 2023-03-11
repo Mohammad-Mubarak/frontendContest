@@ -1,0 +1,169 @@
+/* Set default styles for all screen sizes */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .header {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header li {
+    margin-left: 20px;
+  }
+  
+  .aboutme {
+    padding: 20px;
+  }
+  
+  .aboutme h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .mywork {
+    padding: 20px;
+  }
+  
+  .mywork h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .mywork ol {
+    list-style: none;
+    counter-reset: mywork-counter;
+  }
+  
+  .mywork li {
+    margin-bottom: 10px;
+  }
+  
+  .mywork li a::before {
+    content: counter(mywork-counter) ". ";
+    counter-increment: mywork-counter;
+  }
+  
+  .testimonial {
+    padding: 20px;
+  }
+  
+  .testimonial h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial p {
+    margin-bottom: 20px;
+  }
+  
+  .pricing {
+    padding: 20px;
+  }
+  
+  .pricing h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .pricing ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .pricing li {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .pricing li h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .pricing li h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #888;
+  }
+  
+  .pricing li p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .pricing li ul {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  
+  .pricing li ul li {
+    margin-bottom: 5px;
+  }
+  
+  .pricing button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  
+  /* Apply responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .header ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .header li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .pricing ul {
+      flex-direction: column;
+    }
+  
+    .pricing li {
+      width: 100%;
+    }
+  }
+  
